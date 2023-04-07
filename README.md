@@ -8,7 +8,8 @@
 - ![](https://github.com/DSCI-310/dsci-310-group-08-pkg/actions/workflows/test_coverage.yaml/badge.svg)
   <!-- badges: end -->
 
-The goal of Movie is to …
+The goal of Movie is to provide the user with common useful functions
+that are useful for reproducing the Movie Budget Analysis
 
 ## Installation
 
@@ -26,32 +27,57 @@ This is a basic example which shows you how to solve a common problem:
 
 ``` r
 library(Movie)
-## basic example code
+## basic example code for downloading a dataset
+path <- "https://github.com/rehan13/ownprac/blob/main/testsheet.csv"
+out_dir <- tempfile()
+dataset <- read_dataset(path, out_dir)
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
+Another example is how you can clean data.
 
 ``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
+# Given a dummy data called test_df
+test_df <- data.frame(col1 = c(1, 2, 3),
+                      col2 = c(4, 5, 6),
+                      col3 = c(7, 8, 9))
+
+
+# Running EDA function for testing
+eda_df <- EDA(test_df, select_cols = c("col1", "col2"), col1 > 1, col2 > 5)
+eda_df
+#>   col1 col2
+#> 1    3    6
 ```
 
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date. `devtools::build_readme()` is handy for this. You could also
-use GitHub Actions to re-render `README.Rmd` every time you push. An
-example workflow can be found here:
-<https://github.com/r-lib/actions/tree/v1/examples>.
+We can also generate plots using the function in this library. But first
+we will take a test_df here to use for both plots
 
-You can also embed plots, for example:
+``` r
+data_test <- data.frame(
+  revenue = c(1,2,3),
+  budget = c(5,6,7)
+)
+```
 
-<img src="man/figures/README-pressure-1.png" width="100%" />
+Now we are going to make a scatter plot and correlation plot with this
+data frame.
 
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub and CRAN.
+``` r
+scatter_plot = plot_scatter_graph(data=data_test,
+                                  x_axis_data=revenue,
+                                  y_axis_data=budget, x_axis_label="Revenue",
+                                  y_axis_label="Budget", title_label = "Scatter Plot", text_size=20)
+scatter_plot
+```
+
+<img src="man/figures/README-unnamed-chunk-4-1.png" width="100%" />
+
+``` r
+correlation_plot = correlation_plot(data_test, "correlation")
+#> Registered S3 method overwritten by 'GGally':
+#>   method from   
+#>   +.gg   ggplot2
+correlation_plot
+```
+
+<img src="man/figures/README-unnamed-chunk-5-1.png" width="100%" />
