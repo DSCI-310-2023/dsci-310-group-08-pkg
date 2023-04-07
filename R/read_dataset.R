@@ -8,8 +8,10 @@
 #'
 #' @return Returns the dataset as a datframe
 #' @export
-#'
-
+#' @examples
+#' path <- "https://github.com/rehan13/ownprac/blob/main/testsheet.csv"
+#' out_dir <- tempfile()
+#' dataset <- read_dataset(path, out_dir)
 read_dataset <- function(path, out_dir){
   utils::download.file(path, destfile = out_dir)
   dataset <- utils::read.csv(out_dir)

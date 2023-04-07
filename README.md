@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# Movie
+# Movie (1.0.0)
 
 <!-- badges: start -->
 
@@ -9,7 +9,20 @@
   <!-- badges: end -->
 
 The goal of Movie is to provide the user with common useful functions
-that are useful for reproducing the Movie Budget Analysis
+that are useful for reproducing the Movie Budget Analysis. This package
+is built on many other packages such as ggplot2, GGally and tidyverse.
+There are other packages such as ggplot2 that can genereate plots
+similar to the ones that can be generated using this package. Utils can
+be used to downlaod datasets from the internet but this package gives
+you all the useful function for the particular type of project mentioned
+above.
+
+### Functions Included:
+
+- `read_dataset()`
+- `EDA()`
+- `correlation_plot()`
+- `plot_scatter_graph()`
 
 ## Installation
 
@@ -81,3 +94,27 @@ correlation_plot
 ```
 
 <img src="man/figures/README-unnamed-chunk-5-1.png" width="100%" />
+
+## License
+
+This project, developed by Rehan Mondal and Abheet Kansal, is licensed
+under the terms of the MIT license.
+
+Permission is hereby granted, free of charge, to any person obtaining a
+copy of this software and associated documentation files (the
+“Software”), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense and/or sell copies of the Software, and to permit
+persons to whom the Software is furnished to do so, subject to the
+following conditions:
+
+The above copyright notice and this permission notice shall be included
+in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS
+OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

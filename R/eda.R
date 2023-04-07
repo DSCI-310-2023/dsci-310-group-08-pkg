@@ -10,8 +10,12 @@
 #'
 #' @return Returns the dataframe after selecting the required columns and filtering them based on the criteria given
 #' @export
-#'
-
+#' @examples
+#' test_df <- data.frame(col1 = c(1, 2, 3),
+#' col2 = c(4, 5, 6),
+#' col3 = c(7, 8, 9))
+#' eda_df <- EDA(test_df, select_cols = c("col1", "col2"), col1 > 1, col2 > 5)
+#' eda_df
 EDA <- function(data, select_cols, ...) {
 
   data <- dplyr::select(data, tidyselect::all_of(select_cols))

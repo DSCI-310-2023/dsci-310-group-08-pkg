@@ -36,3 +36,14 @@ The generated plot with the applied parameters
 This function plots a scatter graph given the data and the column names to
 visualize and also allows to edit the graphs axis labels and plot dimensions
 }
+\examples{
+data_test <- data.frame(
+revenue = c(1,2,3),
+budget = c(5,6,7)
+)
+scatter_plot = plot_scatter_graph(data=data_test,
+x_axis_data=revenue,
+y_axis_data=budget, x_axis_label="Revenue",
+y_axis_label="Budget", title_label = "Scatter Plot", text_size=20)
+scatter_plot
+}

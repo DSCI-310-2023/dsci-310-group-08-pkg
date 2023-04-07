@@ -8,7 +8,13 @@
 #'
 #' @return Returns the generated plot
 #' @export
-#'
+#' @examples
+#' data_test <- data.frame(
+#' revenue = c(1,2,3),
+#' budget = c(5,6,7)
+#' )
+#' correlation_plot = correlation_plot(data_test, "correlation")
+#' correlation_plot
 correlation_plot <- function(data, title){
   g <- data %>%
     GGally::ggpairs()+
