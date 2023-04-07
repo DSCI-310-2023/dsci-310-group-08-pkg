@@ -15,7 +15,8 @@ knitr::opts_chunk$set(
 
 # Movie
 
-<!-- badges: start -->
+<!-- badges: start -->-
+![](https://github.com/DSCI-310/dsci-310-group-08-pkg/actions/workflows/test_coverage.yaml/badge.svg)
 <!-- badges: end -->
 
 The goal of Movie is to ...

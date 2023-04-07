@@ -1,18 +1,14 @@
-# Creating a dataframe for testing the grapher function
+# Test for Correlation Plot
+
+# Creating a dataframe for testing the function
 data_test <- data.frame(
   revenue = c(1,2,3),
   budget = c(5,6,7)
 )
 
-# Running the plot_scatter_graph function from grapher to test the outputs
-scatter_plot = plot_scatter_graph(data=data_test,
-                                  x_axis_data=revenue,
-                                  y_axis_data=budget, x_axis_label="Revenue",
-                                  y_axis_label="Budget", title_label = "Plot", text_size=20)
+# Running correlation_plot function for testing
+correlation_plot = correlation_plot(data_test, "correlation")
 
-# Tests for grapher with the expected outputs
-testthat::expect_identical(scatter_plot$labels$y, "Budget")
-testthat::expect_identical(scatter_plot$labels$x, "Revenue")
-testthat::expect_identical(scatter_plot$labels$title, "Plot")
-testthat::expect_s3_class(scatter_plot, "ggplot")
-testthat::expect_error(print(scatter_plot), NA)
+# Test for expected outputs to check correlation_plot
+testthat::expect_identical(correlation_plot$title, "correlation")
+testthat::expect_s3_class(correlation_plot, "ggmatrix")
