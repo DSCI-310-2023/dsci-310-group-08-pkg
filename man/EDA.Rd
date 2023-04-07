@@ -19,3 +19,10 @@ Returns the dataframe after selecting the required columns and filtering them ba
 \description{
 This function takes in a dataframe and only selects the columns passed in as selects and filter the columns entered to filtered.
 }
+\examples{
+test_df <- data.frame(col1 = c(1, 2, 3),
+col2 = c(4, 5, 6),
+col3 = c(7, 8, 9))
+eda_df <- EDA(test_df, select_cols = c("col1", "col2"), col1 > 1, col2 > 5)
+eda_df
+}

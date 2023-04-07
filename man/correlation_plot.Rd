@@ -17,3 +17,11 @@ Returns the generated plot
 \description{
 This function gives a correlation plot by running ggpairs when a dataframe (data) is passed and a title for it
 }
+\examples{
+data_test <- data.frame(
+revenue = c(1,2,3),
+budget = c(5,6,7)
+)
+correlation_plot = correlation_plot(data_test, "correlation")
+correlation_plot
+}

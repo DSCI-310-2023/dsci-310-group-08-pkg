@@ -13,9 +13,16 @@
 #'
 #' @return The generated plot with the applied parameters
 #' @export
-#'
-
-
+#' @examples
+#' data_test <- data.frame(
+#' revenue = c(1,2,3),
+#' budget = c(5,6,7)
+#' )
+#' scatter_plot = plot_scatter_graph(data=data_test,
+#' x_axis_data=revenue,
+#' y_axis_data=budget, x_axis_label="Revenue",
+#' y_axis_label="Budget", title_label = "Scatter Plot", text_size=20)
+#' scatter_plot
 plot_scatter_graph <- function(data, x_axis_data,
                                y_axis_data, x_axis_label, y_axis_label, title_label,
                                text_size) {
