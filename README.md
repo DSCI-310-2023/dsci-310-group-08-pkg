@@ -4,7 +4,9 @@
 # Movie
 
 <!-- badges: start -->
-<!-- badges: end -->
+
+- ![](https://github.com/DSCI-310/dsci-310-group-08-pkg/actions/workflows/test_coverage.yaml/badge.svg)
+  <!-- badges: end -->
 
 The goal of Movie is to …
 
