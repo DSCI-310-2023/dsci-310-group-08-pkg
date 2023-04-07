@@ -1,0 +1,34 @@
+---
+title: "Introduction to plot_scatter_graph function"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction to plot_scatter_graph function}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(Movie)
+```
+This function helps to genereate a scatter-plot given a dataframe.
+
+```{r}
+
+data_test <- data.frame(
+  revenue = c(1,2,3),
+  budget = c(5,6,7)
+)
+
+scatter_plot = plot_scatter_graph(data=data_test,
+                                  x_axis_data=revenue,
+                                  y_axis_data=budget, x_axis_label="Revenue",
+                                  y_axis_label="Budget", title_label = "Scatter Plot", text_size=20)
+scatter_plot
+```
