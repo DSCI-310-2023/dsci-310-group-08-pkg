@@ -6,6 +6,7 @@
 <!-- badges: start -->
 
 - ![](https://github.com/DSCI-310/dsci-310-group-08-pkg/actions/workflows/test_coverage.yaml/badge.svg)
+  [![codecov](https://codecov.io/gh/DSCI-310/dsci-310-group-08-pkg/branch/main/graph/badge.svg?token=1zVFP2D7XT)](https://codecov.io/gh/DSCI-310/dsci-310-group-08-pkg)
   <!-- badges: end -->
 
 The goal of Movie is to provide the user with common useful functions
